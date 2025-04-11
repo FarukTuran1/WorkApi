@@ -32,10 +32,14 @@ Proje, standart .NET Web API proje yapısını takip eder:
 
 ### Veritabanı Kurulumu
 
-1.  MySQL sunucunuzda bu uygulama için yeni bir veritabanı oluşturun.
+1.  MySQL sunucunuzda bu uygulama için yeni bir veritabanı oluşturun (veya script'in başındaki `CREATE DATABASE IF NOT EXISTS work_db` satırını kullanın).
 2.  Proje içindeki `appsettings.json` (veya geliştirme ortamı için `appsettings.Development.json`) dosyasını açın.
-3.  `ConnectionStrings` bölümündeki `DefaultConnection` değerini, oluşturduğunuz MySQL veritabanının bağlantı bilgileriyle (sunucu adresi, veritabanı adı, kullanıcı adı, şifre) güncelleyin.
-4.  **Önemli Not:** Bu proje, veritabanı şemasını otomatik olarak oluşturmak veya güncellemek için Entity Framework Core Migrations kullanmamaktadır. Veritabanı tabloları ve ilişkileri, `Models` klasöründeki entity sınıflarına ve `Data/ApplicationDbContext.cs` içindeki Fluent API yapılandırmalarına **tam olarak uyacak şekilde** manuel SQL komutları kullanılarak (örneğin phpMyAdmin veya MySQL Workbench aracılığıyla) oluşturulmalıdır. Model tanımları ile veritabanı şeması arasındaki tutarlılık, uygulamanın hatasız çalışması için kritiktir.
+3.  `ConnectionStrings` bölümündeki `DefaultConnection` değerini, kullanacağınız MySQL veritabanının bağlantı bilgileriyle (sunucu adresi, veritabanı adı, kullanıcı adı, şifre) güncelleyin. Veritabanı adı olarak script'teki gibi `work_db` kullanmanız önerilir.
+4.  **Veritabanı Şemasını Oluşturma:**
+    *   Bu proje, veritabanı şemasını otomatik olarak oluşturmak veya güncellemek için Entity Framework Core Migrations kullanmamaktadır.
+    *   Gerekli tabloları ve ilişkileri oluşturmak için, proje kök dizininde bulunan `database_setup.sql` dosyasını bir MySQL yönetim aracı (örn: phpMyAdmin, MySQL Workbench) kullanarak veritabanınızda çalıştırın.
+    *   Bu script, `work_db` adında bir veritabanı oluşturmaya çalışır (varsa atlar) ve ardından gerekli tüm tabloları, indeksleri ve ilişkileri tanımlar.
+    *   **Önemli:** Uygulamanın hatasız çalışması için, `Models` klasöründeki entity sınıfları ve `Data/ApplicationDbContext.cs` içindeki Fluent API yapılandırmaları ile bu SQL script'inin tanımladığı şemanın **tutarlı** olması kritik öneme sahiptir.
 
 ### Uygulamayı Çalıştırma
 
