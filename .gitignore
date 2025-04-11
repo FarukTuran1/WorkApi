@@ -1,0 +1,248 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,visualstudio,visualstudiocode,rider
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,visualstudio,visualstudiocode,rider
+
+### .NET Core ###
+# Ignores files specific to .NET Core projects.
+
+**/bin/
+**/obj/
+**/out/
+**/publish/
+.vs/
+*.user
+*.cache
+*.suo
+*.sln.docstates
+
+# UserSecrets files should not be committed
+**/secrets.json
+
+# Environment variables
+.env
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Build results
+[Bb]uild/
+[Rr]elease/
+[Dd]ebug/
+[Ww]eb/
+
+# Output folders
+artifacts/
+
+# F# folders
+[Tt]emp/
+
+# F# Interactive
+**/*.fsx
+
+# F# cache files
+.fable/
+fable_temp/
+.ionide/
+
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+
+#FAKE build script files
+.fake/
+
+# Rider files
+.idea/
+*.iml
+
+# Visual Studio Code files
+.vscode/
+
+# App settings based on environment that should not be committed
+**/appsettings.Development.json
+**/appsettings.*.json
+!**/appsettings.template.json # Keep template files if they exist
+
+# Log files
+**/logs/
+*.log
+
+# Test results
+**/TestResults/
+*.trx
+*.coverage
+*.coverlet.json
+
+
+### VisualStudio ###
+# Ignores files specific to Visual Studio projects.
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's directory in `.vs`
+#.vs
+# Auto-generated compile plugin options file
+**/GeneratedInternalTypeHelper.g.cs
+**/GeneratedInternalTypeHelper.g.vb
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.cache
+
+# Miscellaneous files
+*.pdb
+*.bak
+*.force
+*.pyc
+*.pyo
+*.pyd
+
+# ReSharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Team Foundation Server files
+$tf/
+
+# DotCover files
+*.dotCover
+
+# NCrunch files
+_NCrunch_*/
+*.ncrunch*
+
+# Installshield output folder
+[Ii]nstall[Ss]hield/
+
+# StyleCop files
+StyleCopReport.xml
+
+# BenchmarkDotNet output files
+**/BenchmarkDotNet.Artifacts/
+
+# Native Debugging Files
+*.dll.recipe
+*.exe.recipe
+
+# Code Analysis files
+*.ruleset
+
+# IncrediBuild files
+*.ib_pdb.*
+*.ib_d.*
+*.ib_id.*
+
+# JSLint files
+JSLintNet.json
+
+# Paket files
+paket.lock
+paket.dependencies
+
+# Fody files
+FodyWeavers.xml
+
+
+### VisualStudioCode ###
+# Ignores files specific to Visual Studio Code.
+
+.vscode/
+*.code-workspace
+
+
+### Rider ###
+# Ignores files specific to Rider IDE.
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+# Rider
+.idea/**/.idea. både database-projekt (.dbmdl) og løsningsfiler (.sln)
+.idea/**/.idea.database.index
+
+# Rider Persistence cache
+.idea/.idea.WorkApi/.idea/shelf
+
+# End of https://www.toptal.com/developers/gitignore/api/dotnetcore,visualstudio,visualstudiocode,rider 
